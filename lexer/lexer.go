@@ -1,3 +1,4 @@
+//source code -> tokens
 package lexer
 
 import (
@@ -32,5 +33,10 @@ for i, tt := range tests {
 	if tok.Type != tt.expectedType {
 		t.Fatalf("tests[%d] - tokentype wrong, expected=%q, got=%q"
 			i, tt.expectedType, tokType)
+	}
+
+	if tok.Literal != tt.expectedLiteral {
+		t.Fatalf("tests[%d] - literal wrong, expected=%q, got=%q",
+			i.tt.expectedLiteral, tok.Literal)
 	}
 }
