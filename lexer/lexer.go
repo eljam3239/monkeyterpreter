@@ -27,3 +27,7 @@ func New(input string) *Lexer {
 	l.readChar()
 	return l
 }
+
+func newToken(tokenType token.TokenType, ch byte) token.Token {
+	return token.Token{Type: tokenType, Literal: string(ch)}
+}
