@@ -34,18 +34,18 @@ func newToken(tokenType token.TokenType, ch byte) token.Token {
 
 import "monkey/token"
 func (l *Lexer) NextToken() token.Token {
-var tok token.Token
-switch l.ch {
-case '=':
-tok = newToken(token.ASSIGN, l.ch)
-case ';':
-tok = newToken(token.SEMICOLON, l.ch)
-case '(':
-tok = newToken(token.LPAREN, l.ch)
-case ')':
-tok = newToken(token.RPAREN, l.ch)
-case ',':
-tok = newToken(token.COMMA, l.ch)
-case '+':
-tok = newToken(token.PLUS, l.ch)
-case '{':
+	var tok token.Token
+	switch l.ch {
+	case '=':
+		tok = newToken(token.ASSIGN, l.ch)
+	case ';':
+		tok = newToken(token.SEMICOLON, l.ch)
+	case '(':
+		tok = newToken(token.LPAREN, l.ch)
+	case ')':
+		tok = newToken(token.RPAREN, l.ch)
+	case ',':
+		tok = newToken(token.COMMA, l.ch)
+	case '+':
+		tok = newToken(token.PLUS, l.ch)
+	case '{':
